@@ -1072,26 +1072,19 @@ body::before {
 
   /* NAVBAR */
   .navbar {
-    padding: 22px 20px;
+    padding: 26px 24px;
 
     flex-direction: column;
-    gap: 20px;
+
+    gap: 24px;
   }
 
-  .logo h1,
-  .brand h1 {
-    font-size: 2.2rem;
-    letter-spacing: 8px;
-  }
-
-  .logo p,
-  .brand p {
-    font-size: 0.7rem;
-    letter-spacing: 4px;
+  .brand {
+    transform: scale(1.15);
   }
 
   .nav-links {
-    gap: 24px;
+    gap: 30px;
 
     flex-wrap: wrap;
 
@@ -1099,31 +1092,31 @@ body::before {
   }
 
   .nav-links a {
-    font-size: 0.72rem;
+    font-size: 0.85rem;
 
-    letter-spacing: 3px;
+    letter-spacing: 4px;
   }
 
-  /* HERO SECTION */
+  /* HERO */
   .hero {
-    min-height: 92vh;
+    min-height: 100vh;
 
     padding:
-      160px
-      20px
-      120px;
+      170px
+      24px
+      150px;
   }
 
   .minimalist-hero {
-    margin-top: -40px;
+    margin-top: -20px;
 
-    gap: 34px;
+    gap: 42px;
   }
 
   .large-logo img {
-    width: 95vw;
+    width: 115vw;
 
-    max-width: 480px;
+    max-width: 620px;
   }
 
   .hero-buttons {
@@ -1131,63 +1124,69 @@ body::before {
 
     align-items: center;
 
-    gap: 18px;
+    gap: 20px;
   }
 
   .primary-btn,
   .secondary-btn {
-    width: 260px;
+    width: 290px;
 
-    padding: 16px 20px;
+    padding: 18px 24px;
 
-    font-size: 0.82rem;
+    font-size: 0.9rem;
 
     letter-spacing: 3px;
   }
 
+  /* ABOUT */
+  .flow-text {
+    font-size: 1.08rem;
+
+    line-height: 2.1;
+
+    padding: 0 18px;
+  }
+
   /* SERVICES */
   .service-card {
-    padding: 34px 28px;
+    padding: 38px 30px;
   }
 
   .service-card h4 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
-  /* ABOUT */
-  .flow-text {
-    padding: 0 10px;
-
+  .service-card p {
     font-size: 1rem;
 
     line-height: 2;
   }
 
   /* CONTACT */
-  .contact-grid,
-  .pricing-layout,
-  .payment-methods {
-    grid-template-columns: 1fr !important;
-
-    display: grid;
+  .contact-card {
+    padding: 34px 28px;
   }
 
   /* FOOTER */
   .footer {
-    padding: 70px 20px;
+    padding: 90px 24px;
   }
 
   .footer h3 {
-    font-size: 2.4rem;
+    font-size: 3rem;
   }
 
   .footer-tagline {
-    font-size: 0.9rem;
+    font-size: 1rem;
 
-    line-height: 1.8;
+    line-height: 2;
   }
 
   .instagram-icon img {
-    width: 80px !important;
+    width: 105px !important;
+  }
+
+  .copyright {
+    font-size: 0.9rem;
   }
 }
