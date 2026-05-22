@@ -13,7 +13,6 @@ html {
 body {
   background:
     radial-gradient(circle at top left, rgba(201, 120, 54, 0.16), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(201, 120, 54, 0.1), transparent 28%),
     linear-gradient(180deg, #050505 0%, #0a0a0a 45%, #050505 100%);
   color: #f5f5f5;
   font-family: "Inter", sans-serif;
@@ -23,7 +22,6 @@ body {
 .app {
   width: 100%;
   min-height: 100vh;
-  background: transparent;
 }
 
 /* NAVBAR */
@@ -31,56 +29,48 @@ body {
 .navbar {
   width: 100%;
   padding: 24px 7%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
+
   background: rgba(5, 5, 5, 0.88);
   backdrop-filter: blur(14px);
+
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 20px;
 }
 
-.tree-logo {
-  width: 120px;
-  height: 105px;
-  object-fit: contain;
-  display: block;
-}
-
-.brand-text {
+.logo-text {
   display: flex;
   flex-direction: column;
-  line-height: 0.95;
+  line-height: 1;
 }
 
-.brand-text h1 {
+.logo-text h1 {
   font-family: "Cormorant Garamond", serif;
   font-size: 2.2rem;
-  letter-spacing: 6px;
   font-weight: 600;
+  letter-spacing: 8px;
+  color: #ffffff;
+  margin: 0;
+
+  text-shadow: 0 0 20px rgba(255, 120, 40, 0.15);
 }
 
-.brand-text .massage {
+.logo-text span {
   color: #c97836;
-  font-size: 1rem;
-  letter-spacing: 7px;
-  margin-top: 4px;
-  font-weight: 700;
-}
-
-.brand-text span {
-  font-size: 0.8rem;
-  letter-spacing: 3px;
-  color: rgba(255, 255, 255, 0.7);
-  margin-top: 5px;
+  font-size: 0.72rem;
+  letter-spacing: 5px;
+  margin-top: 8px;
 }
 
 .nav-links {
@@ -91,8 +81,8 @@ body {
 .nav-links a {
   text-decoration: none;
   color: white;
-  font-size: 0.92rem;
-  letter-spacing: 2px;
+  font-size: 0.82rem;
+  letter-spacing: 3px;
   transition: 0.3s ease;
   position: relative;
 }
@@ -120,14 +110,22 @@ body {
 
 .hero {
   min-height: 100vh;
-  padding: 180px 8% 120px;
+  width: 100%;
+
   display: flex;
   align-items: center;
+  justify-content: center;
+
   position: relative;
   overflow: hidden;
+
   background:
-    linear-gradient(rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.82)),
-    url("https://images.unsplash.com/photo-1519823551278-64ac92734fb1?q=80&w=2070&auto=format&fit=crop");
+    linear-gradient(
+      rgba(0, 0, 0, 0.72),
+      rgba(0, 0, 0, 0.88)
+    ),
+    url("/massage-photo.jpg");
+
   background-size: cover;
   background-position: center;
 }
@@ -135,44 +133,51 @@ body {
 .overlay {
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top left, rgba(201, 120, 54, 0.22), transparent 40%);
+
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(201, 120, 54, 0.18),
+      transparent 60%
+    );
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 760px;
+
+  max-width: 850px;
+  text-align: center;
+  padding: 0 20px;
 }
 
 .eyebrow {
   color: #d88948;
-  letter-spacing: 4px;
-  font-size: 0.9rem;
-  margin-bottom: 30px;
+  letter-spacing: 5px;
+  font-size: 0.85rem;
+  margin-bottom: 28px;
 }
 
 .hero-content h2 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 6rem;
+  font-size: 5.5rem;
   line-height: 0.95;
   font-weight: 600;
   margin-bottom: 35px;
 }
 
-.hero-content h2 span {
-  color: #c97836;
-}
-
 .hero-description {
-  max-width: 620px;
+  max-width: 680px;
+  margin: auto auto 45px;
+
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.9;
   font-size: 1.05rem;
-  margin-bottom: 45px;
 }
 
 .hero-buttons {
   display: flex;
+  justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -181,7 +186,7 @@ body {
 .secondary-btn {
   padding: 16px 34px;
   border-radius: 50px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: 2px;
   cursor: pointer;
   transition: 0.3s ease;
@@ -191,6 +196,7 @@ body {
   background: #c97836;
   color: white;
   border: none;
+
   box-shadow:
     0 0 18px rgba(201, 120, 54, 0.35),
     0 0 45px rgba(201, 120, 54, 0.18);
@@ -198,7 +204,7 @@ body {
 
 .primary-btn:hover {
   transform: translateY(-3px);
-  background: #d88948;
+
   box-shadow:
     0 0 28px rgba(201, 120, 54, 0.55),
     0 0 70px rgba(201, 120, 54, 0.28);
@@ -206,8 +212,8 @@ body {
 
 .secondary-btn {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .secondary-btn:hover {
@@ -216,36 +222,17 @@ body {
   transform: translateY(-3px);
 }
 
-/* CONTENT SECTIONS */
+/* PAGE */
+
+.page {
+  min-height: 100vh;
+  padding: 160px 9% 120px;
+}
+
+/* CONTENT */
 
 .content-section {
-  padding: 120px 9%;
   position: relative;
-  background: transparent;
-  overflow: hidden;
-}
-
-.content-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 10%;
-  width: 80%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(201, 120, 54, 0.28), transparent);
-}
-
-.content-section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 20% 10%, rgba(201, 120, 54, 0.06), transparent 35%);
-  pointer-events: none;
-  z-index: -1;
-}
-
-.dark-section {
-  background: transparent;
 }
 
 .section-intro {
@@ -256,14 +243,13 @@ body {
   color: #d88948;
   letter-spacing: 4px;
   margin-bottom: 12px;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
 }
 
 .section-intro h3 {
   font-family: "Cormorant Garamond", serif;
   font-size: 4rem;
   font-weight: 600;
-  text-shadow: 0 0 30px rgba(255, 255, 255, 0.08);
 }
 
 .flow-text {
@@ -271,59 +257,70 @@ body {
 }
 
 .flow-text p {
-  font-size: 1.08rem;
-  line-height: 2.1;
+  font-size: 1.05rem;
+  line-height: 2;
   margin-bottom: 35px;
   color: rgba(255, 255, 255, 0.82);
 }
 
 /* GLASS CARDS */
 
-.services-grid {
+.services-grid,
+.contact-layout {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 28px;
 }
 
 .service-card,
-.price-card,
-.booking-box,
-.contact-block {
+.contact-block,
+.price-card {
   background: rgba(255, 255, 255, 0.055);
+
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
+
   border: 1px solid rgba(255, 255, 255, 0.09);
+
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.45),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
   transition: 0.3s ease;
 }
 
-.service-card {
+.service-card,
+.contact-block {
   padding: 35px;
   border-radius: 30px;
 }
 
 .service-card:hover,
-.price-card:hover,
-.contact-block:hover {
-  transform: translateY(-10px) scale(1.015);
+.contact-block:hover,
+.price-card:hover {
+  transform: translateY(-10px);
+
   border-color: rgba(201, 120, 54, 0.45);
+
   box-shadow:
     0 25px 80px rgba(0, 0, 0, 0.55),
     0 0 45px rgba(201, 120, 54, 0.12);
 }
 
-.service-card h4 {
+.service-card h4,
+.contact-block h4 {
   font-family: "Cormorant Garamond", serif;
   font-size: 2rem;
   margin-bottom: 18px;
   color: #c97836;
 }
 
-.service-card p {
+.service-card p,
+.contact-block p,
+.contact-block a {
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
 }
 
 /* PRICING */
@@ -332,12 +329,13 @@ body {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-top: 60px;
 }
 
 .price-card {
   flex: 1;
   min-width: 260px;
+
   padding: 45px;
   border-radius: 35px;
 }
@@ -355,71 +353,13 @@ body {
   color: #c97836;
 }
 
-.policy-text p {
-  margin-bottom: 12px;
-  color: rgba(255, 255, 255, 0.7);
-}
+/* ANIMATIONS */
 
-/* BOOKING */
-
-.booking-section {
-  text-align: center;
-}
-
-.booking-box {
-  max-width: 750px;
-  margin: auto;
-  padding: 70px 50px;
-  border-radius: 40px;
-}
-
-.booking-box p {
-  line-height: 1.9;
-  color: rgba(255, 255, 255, 0.82);
-  margin-bottom: 20px;
-}
-
-.booking-note {
-  margin-bottom: 35px !important;
-}
-
-/* CONTACT */
-
-.contact-layout {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
-}
-
-.contact-block {
-  padding: 35px;
-  border-radius: 28px;
-}
-
-.contact-block h4 {
-  color: #c97836;
-  margin-bottom: 18px;
-  letter-spacing: 2px;
-}
-
-.contact-block a,
-.contact-block p {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  line-height: 1.8;
-}
-
-.contact-block a:hover {
-  color: #c97836;
-}
-
-/* SCROLL ANIMATION - NO BLUR */
-
-.content-section,
 .service-card,
-.price-card,
 .contact-block,
-.booking-box {
+.price-card,
+.flow-text,
+.section-intro {
   animation: fadeUp 0.8s ease both;
   animation-timeline: view();
   animation-range: entry 8% cover 25%;
@@ -439,10 +379,11 @@ body {
 
 /* MOBILE */
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   .navbar {
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
+    padding: 22px;
   }
 
   .nav-links {
@@ -461,141 +402,465 @@ body {
 }
 
 @media (max-width: 700px) {
-  .hero {
-    padding-top: 230px;
-  }
-
   .hero-content h2 {
     font-size: 3rem;
   }
 
-  .brand {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .brand-text h1 {
-    font-size: 1.8rem;
-  }
-
-  .content-section {
-    padding: 90px 7%;
-  }
-
-  .booking-box {
-    padding: 50px 25px;
-  }
-}
-
-/* MOBILE FIX - BIGGER + SCROLLABLE */
-
-@media (max-width: 700px) {
-  html,
-  body,
-  #root,
-  .app {
-    min-height: 100%;
-    height: auto;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-
-  .navbar {
-    position: sticky;
-    top: 0;
-    padding: 18px 18px;
-  }
-
-  .brand {
-    flex-direction: row;
-    justify-content: flex-start;
-    width: 100%;
-  }
-
-  .tree-logo {
-    width: 95px;
-    height: 95px;
-  }
-
-  .brand-text h1 {
-    font-size: 1.9rem;
-    letter-spacing: 4px;
-  }
-
-  .brand-text .massage {
-    font-size: 1rem;
+  .logo-text h1 {
+    font-size: 1.7rem;
     letter-spacing: 5px;
   }
 
-  .brand-text span {
-    font-size: 0.78rem;
-    letter-spacing: 2px;
+  .logo-text span {
+    font-size: 0.62rem;
+    letter-spacing: 3px;
   }
 
   .nav-links {
     display: none;
   }
 
+  .page {
+    padding: 140px 22px 90px;
+  }
+
   .hero {
-    min-height: auto;
-    padding: 80px 22px 90px;
+    padding: 0 22px;
   }
 
-  .hero-content h2 {
-    font-size: 4rem;
-    line-height: 0.95;
-  }
-
-  .eyebrow {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  .hero-description {
-    font-size: 1.15rem;
-    line-height: 1.85;
-  }
-
-  .content-section {
-    min-height: auto;
-    padding: 90px 22px;
-  }
-
-  .section-intro h3 {
-    font-size: 3.3rem;
-  }
-
-  .section-intro p {
-    font-size: 0.9rem;
-  }
-
+  .hero-description,
   .flow-text p,
   .service-card p,
-  .booking-box p,
-  .contact-block a,
   .contact-block p,
-  .policy-text p {
-    font-size: 1.12rem;
-  }
-
-  .service-card h4 {
-    font-size: 2.25rem;
-  }
-
-  .price-card h4 {
-    font-size: 4.4rem;
+  .contact-block a {
+    font-size: 1rem;
   }
 
   .primary-btn,
   .secondary-btn {
     width: 100%;
-    font-size: 0.95rem;
-    padding: 18px 24px;
   }
 
-  .services-grid,
-  .pricing-layout,
-  .contact-layout {
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .pricing-layout {
+    flex-direction: column;
+  }
+}
+
+.hero-logo img {
+  width: 520px;
+  max-width: 90vw;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 0 25px rgba(201, 120, 54, 0.18))
+    drop-shadow(0 0 60px rgba(201, 120, 54, 0.12));
+
+  animation: floatLogo 5s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.hero-logo {
+  margin-top: 120px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 120, 54, 0.2), transparent 65%);
+  filter: blur(20px);
+  z-index: 1;
+}
+
+.hero-logo {
+  position: relative;
+  z-index: 2;
+  margin-top: 120px;
+}
+
+.hero-logo img {
+  width: 560px;
+  max-width: 88vw;
+}
+
+.hero-content::before {
+  display: none;
+}
+
+.hero-highlights {
+  margin-top: 45px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.hero-highlights div {
+  padding: 14px 24px;
+  border: 1px solid rgba(201, 120, 54, 0.28);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.78);
+  letter-spacing: 2px;
+  font-size: 0.72rem;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.hero-content::before,
+.hero-content::after,
+.hero::after {
+  display: none !important;
+  content: none !important;
+}
+
+.hero-logo {
+  overflow: hidden;
+  width: 520px;
+  max-width: 88vw;
+  margin: 120px auto 0;
+}
+
+.hero-logo img {
+  width: calc(100% + 8px);
+  margin-left: -8px;
+  display: block;
+}
+
+/* BRAND LINK FIX */
+
+.brand {
+  text-decoration: none;
+}
+
+/* MOBILE MENU */
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(201, 120, 54, 0.35);
+  border-radius: 10px;
+  font-size: 1.6rem;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 70px 20px;
+  text-align: center;
+  border-top: 1px solid rgba(201, 120, 54, 0.15);
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.footer h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  letter-spacing: 8px;
+  margin-bottom: 12px;
+}
+
+.footer p {
+  color: #c97836;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.footer span {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.85rem;
+}
+
+/* MOBILE NAV */
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.96);
+    padding: 28px 20px;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    border-bottom: 1px solid rgba(201, 120, 54, 0.18);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
+
+/* PAGE FADE */
+
+.page,
+.hero {
+  animation: pageFade 0.7s ease both;
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ANIMATED BACKGROUND GLOW */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: -20%;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(201, 120, 54, 0.13), transparent 28%),
+    radial-gradient(circle at 80% 70%, rgba(201, 120, 54, 0.1), transparent 30%);
+  animation: glowMove 12s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes glowMove {
+  from {
+    transform: translate(-2%, -2%);
+  }
+
+  to {
+    transform: translate(2%, 2%);
+  }
+}
+
+.contact-page-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.3fr;
+  gap: 35px;
+  align-items: start;
+}
+
+.booking-card {
+  padding: 45px;
+  border-radius: 35px;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(201, 120, 54, 0.18);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.45);
+}
+
+.booking-card h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  color: #c97836;
+  margin-bottom: 20px;
+}
+
+.booking-card p {
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.booking-card a {
+  display: block;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 900px) {
+  .contact-page-layout {
     grid-template-columns: 1fr;
   }
+}
+
+.contact-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.centered {
+  text-align: center;
+}
+
+.booking-card-wide {
+  max-width: 760px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.booking-actions {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.clean-contact {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.clean-contact .contact-block {
+  text-align: center;
+  min-height: 160px;
+}
+
+@media (max-width: 900px) {
+  .clean-contact {
+    grid-template-columns: 1fr;
+  }
+}
+
+.footer-socials {
+  margin: 28px 0;
+
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.footer-socials a,
+.footer-socials span {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 0.92rem;
+}
+
+.footer-socials a:hover {
+  color: #c97836;
+}
+
+.copyright {
+  display: block;
+  margin-top: 20px;
+  color: rgba(255,255,255,0.4);
+  font-size: 0.8rem;
+}
+
+.service-number {
+  display: block;
+  color: rgba(201, 120, 54, 0.55);
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.rates-section {
+  margin-top: 100px;
+}
+
+.price-card p {
+  margin-top: 12px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.policy-text.centered {
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.flow-text {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services-grid {
+  grid-template-columns: 1fr;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.service-card {
+  padding: 42px 46px;
+  border-radius: 28px;
+  text-align: left;
+}
+
+.service-card h4 {
+  font-size: 2.4rem;
+  margin-bottom: 22px;
+}
+
+.service-card p {
+  margin-bottom: 16px;
+}
+
+.service-card p:last-child {
+  margin-bottom: 0;
+}
+
+.service-number {
+  display: none;
+}
+
+.pricing-layout {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.price-card {
+  text-align: center;
+}
+
+.price-card:last-child {
+  grid-column: 1 / -1;
+  max-width: 380px;
+  margin: 0 auto;
+}
+
+.service-cta {
+  margin-top: 90px;
+  text-align: center;
+}
+
+.service-cta h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.service-cta p {
+  max-width: 700px;
+  margin: 0 auto 35px;
+
+  color: rgba(255,255,255,0.72);
+  line-height: 1.9;
 }
