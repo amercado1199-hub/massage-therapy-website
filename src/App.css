@@ -864,3 +864,330 @@ body::before {
   color: rgba(255,255,255,0.72);
   line-height: 1.9;
 }
+
+.hero-divider {
+  width: 120px;
+  height: 1px;
+  margin: 28px auto;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(201, 120, 54, 0.9),
+    transparent
+  );
+}
+
+.home-intro {
+  padding: 90px 22px;
+  text-align: center;
+}
+
+.home-intro p {
+  color: #c97836;
+  letter-spacing: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 30px;
+}
+
+.intro-words {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  flex-wrap: wrap;
+}
+
+.intro-words span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 700px) {
+  .intro-words {
+    gap: 18px;
+  }
+
+  .intro-words span {
+    font-size: 2.4rem;
+  }
+}
+
+.hero-logo img {
+  width: 560px;
+  max-width: 88vw;
+
+  filter:
+    brightness(1.35)
+    contrast(1.12)
+    saturate(1.08)
+    drop-shadow(0 0 22px rgba(255,255,255,0.08))
+    drop-shadow(0 0 35px rgba(201, 120, 54, 0.18));
+
+  opacity: 1;
+}
+
+.payment-section {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.payment-section h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.4rem;
+  margin-bottom: 35px;
+}
+
+.payment-methods {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.payment-card {
+  min-width: 260px;
+
+  padding: 28px;
+
+  border-radius: 24px;
+
+  background: rgba(255,255,255,0.03);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(12px);
+}
+
+.payment-card span {
+  display: block;
+
+  color: #c97836;
+
+  letter-spacing: 3px;
+
+  font-size: 0.8rem;
+
+  margin-bottom: 14px;
+}
+
+.payment-card p {
+  color: rgba(255,255,255,0.88);
+
+  word-break: break-word;
+}
+
+.minimalist-hero {
+  gap: 40px;
+}
+
+.large-logo img {
+  width: 650px;
+  max-width: 90vw;
+
+  filter:
+    drop-shadow(0 0 35px rgba(201, 120, 54, 0.16));
+}
+
+.hero-buttons {
+  margin-top: 10px;
+}
+
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 120px 20px 180px;
+
+  overflow: hidden;
+}
+
+.large-logo img {
+  width: 520px;
+  max-width: 82vw;
+
+  display: block;
+
+  margin: 0 auto;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 0 35px rgba(201, 120, 54, 0.16));
+}
+
+.minimalist-hero {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 42px;
+
+  text-align: center;
+
+  margin-top: -60px;
+}
+
+.footer {
+  margin-top: 80px;
+}
+
+.instagram-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 5px;
+}
+
+.instagram-icon img {
+  width: 140px !important;
+  height: 140px !important;
+
+  object-fit: contain;
+
+  opacity: 0.95;
+
+  transition: 0.3s ease;
+
+  filter:
+    brightness(1)
+    drop-shadow(0 0 20px rgba(201,120,54,0.45));
+}
+
+.instagram-icon img:hover {
+  transform: scale(1.08);
+
+  filter:
+    brightness(1.1)
+    drop-shadow(0 0 30px rgba(201,120,54,0.65));
+}
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    padding: 22px 20px;
+
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logo h1,
+  .brand h1 {
+    font-size: 2.2rem;
+    letter-spacing: 8px;
+  }
+
+  .logo p,
+  .brand p {
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+  }
+
+  .nav-links {
+    gap: 24px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 0.72rem;
+
+    letter-spacing: 3px;
+  }
+
+  /* HERO SECTION */
+  .hero {
+    min-height: 92vh;
+
+    padding:
+      160px
+      20px
+      120px;
+  }
+
+  .minimalist-hero {
+    margin-top: -40px;
+
+    gap: 34px;
+  }
+
+  .large-logo img {
+    width: 95vw;
+
+    max-width: 480px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 18px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 260px;
+
+    padding: 16px 20px;
+
+    font-size: 0.82rem;
+
+    letter-spacing: 3px;
+  }
+
+  /* SERVICES */
+  .service-card {
+    padding: 34px 28px;
+  }
+
+  .service-card h4 {
+    font-size: 2rem;
+  }
+
+  /* ABOUT */
+  .flow-text {
+    padding: 0 10px;
+
+    font-size: 1rem;
+
+    line-height: 2;
+  }
+
+  /* CONTACT */
+  .contact-grid,
+  .pricing-layout,
+  .payment-methods {
+    grid-template-columns: 1fr !important;
+
+    display: grid;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 70px 20px;
+  }
+
+  .footer h3 {
+    font-size: 2.4rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.9rem;
+
+    line-height: 1.8;
+  }
+
+  .instagram-icon img {
+    width: 80px !important;
+  }
+}

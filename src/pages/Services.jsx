@@ -151,6 +151,21 @@ function Services() {
         <p className="policy-text centered">
           24-hour cancellation policy • $50 deposit required for booking
         </p>
+        <div className="payment-section">
+  <h4>Payment Options</h4>
+
+  <div className="payment-methods">
+    <div className="payment-card">
+      <span>VENMO</span>
+      <p>@Carlos-ArceJr</p>
+    </div>
+
+    <div className="payment-card">
+      <span>ZELLE</span>
+      <p>carlos77arce@gmail.com</p>
+    </div>
+  </div>
+</div>
       </section>
     </main>
   );

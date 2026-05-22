@@ -53,17 +53,14 @@ function App() {
   </p>
 
   <div className="footer-socials">
-    <a
-      href="https://instagram.com/carlosarcejr"
-      target="_blank"
-      rel="noreferrer"
-    >
-      Instagram
-    </a>
-
-    <span>Venmo: @Carlos-ArceJr</span>
-
-    <span>Zelle: carlos77arce@gmail.com</span>
+ <a
+  href="https://instagram.com/carlosarcejr"
+  target="_blank"
+  rel="noreferrer"
+  className="instagram-icon"
+>
+  <img src="/instagram-logo.png" alt="Instagram" />
+</a>
   </div>
 
   <span className="copyright">

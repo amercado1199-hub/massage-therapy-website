@@ -1,42 +1,33 @@
 function Home() {
   return (
-    <section className="hero">
-      <div className="overlay"></div>
+    <main>
+      <section className="hero">
+        <div className="overlay"></div>
 
-      <div className="hero-content">
-        <p className="eyebrow">
-          RECOVERY • PERFORMANCE • WELLNESS
-        </p>
+        <div className="hero-content minimalist-hero">
+          <div className="hero-logo large-logo">
+            <img
+              src="/arce-logo.jpg"
+              alt="A.R.C.E Massage Logo"
+            />
+          </div>
 
-        <div className="hero-logo">
-          <img
-            src="/arce-logo.jpg"
-            alt="A.R.C.E Massage Logo"
-          />
+          <div className="hero-buttons">
+            <a href="/contact">
+              <button className="primary-btn">
+                BOOK A SESSION
+              </button>
+            </a>
+
+            <a href="/services">
+              <button className="secondary-btn">
+                VIEW SERVICES
+              </button>
+            </a>
+          </div>
         </div>
-
-        <p className="hero-description">
-          Personalized bodywork focused on recovery, pain relief,
-          mobility, and performance optimization.
-        </p>
-
-        <div className="hero-buttons">
-          <button className="primary-btn">
-            BOOK A SESSION
-          </button>
-
-          <button className="secondary-btn">
-            VIEW SERVICES
-          </button>
-        </div>
-
-        <div className="hero-highlights">
-          <div>SPORTS RECOVERY</div>
-          <div>PAIN RELIEF</div>
-          <div>MOBILITY WORK</div>
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
   );
 }
 
