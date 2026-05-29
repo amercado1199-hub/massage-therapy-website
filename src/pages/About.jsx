@@ -1,9 +1,14 @@
 function About() {
   return (
-    <main className="page content-section">
+    <main className="page about-page">
       <div className="section-intro centered">
         <p>ABOUT</p>
         <h3>Meet Carlos</h3>
+      </div>
+
+      {/* PHOTO */}
+      <div className="about-photo">
+        <img src="/carlos.jpg" alt="Carlos Arce Massage Therapist" />
       </div>
 
       <div className="flow-text">
