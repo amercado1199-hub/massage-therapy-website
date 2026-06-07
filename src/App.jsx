@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
 import Contact from "./pages/Contact";
+import Booking from "./pages/Booking";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -34,6 +35,7 @@ function App() {
             <Link to="/" onClick={closeMenu}>HOME</Link>
             <Link to="/about" onClick={closeMenu}>ABOUT</Link>
             <Link to="/services" onClick={closeMenu}>SERVICES</Link>
+            <Link to="/booking" onClick={closeMenu}>BOOK</Link>
             <Link to="/contact" onClick={closeMenu}>CONTACT</Link>
           </div>
         </nav>
@@ -42,31 +44,32 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/booking" element={<Booking />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
 
         <footer className="footer">
-  <h3>A.R.C.E</h3>
+          <h3>A.R.C.E</h3>
 
-  <p className="footer-tagline">
-    Arts • Recovery • Calm • Energy
-  </p>
+          <p className="footer-tagline">
+            Arts • Recovery • Calm • Energy
+          </p>
 
-  <div className="footer-socials">
- <a
-  href="https://instagram.com/carlosarcejr"
-  target="_blank"
-  rel="noreferrer"
-  className="instagram-icon"
->
-  <img src="/instagram-logo.png" alt="Instagram" />
-</a>
-  </div>
+          <div className="footer-socials">
+            <a
+              href="https://instagram.com/carlosarcejr"
+              target="_blank"
+              rel="noreferrer"
+              className="instagram-icon"
+            >
+              <img src="/instagram-logo.png" alt="Instagram" />
+            </a>
+          </div>
 
-  <span className="copyright">
-    © 2026 A.R.C.E Massage. All rights reserved.
-  </span>
-</footer>
+          <span className="copyright">
+            © 2026 A.R.C.E Massage. All rights reserved.
+          </span>
+        </footer>
       </div>
     </Router>
   );
