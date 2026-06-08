@@ -1260,3 +1260,72 @@ body::before {
     height: 720px;
   }
 }
+
+.payment-section {
+  text-align: center;
+  margin-top: 40px;
+  padding: 30px;
+}
+
+.payment-section h3 {
+  color: #d97732;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.venmo-qr {
+  width: 180px;
+  height: 180px;
+  border-radius: 16px;
+  background: white;
+  padding: 10px;
+}
+
+.payment-section p {
+  margin-top: 12px;
+  color: #ccc;
+}
+
+.payment-section {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.payment-section h2 {
+  color: #d97732;
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.payment-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.payment-card {
+  width: 300px;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(217,119,50,.25);
+  box-shadow: 0 0 25px rgba(217,119,50,.12);
+}
+
+.payment-card h3 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.venmo-qr {
+  width: 200px;
+  border-radius: 14px;
+  background: white;
+  padding: 8px;
+}
+
+.payment-card p {
+  color: #ccc;
+  margin-top: 12px;
+}

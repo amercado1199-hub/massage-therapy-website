@@ -151,23 +151,33 @@ function Services() {
         <p className="policy-text centered">
           24-hour cancellation policy • $50 deposit required for booking
         </p>
-        <div className="payment-section">
-  <h4>Payment Options</h4>
+    <section className="payment-section">
+      <h2>Payment Options</h2>
 
-  <div className="payment-methods">
-    <div className="payment-card">
-      <span>VENMO</span>
-      <p>@Carlos-ArceJr</p>
-    </div>
+      <div className="payment-grid">
+        <div className="payment-card">
+          <h3>Venmo</h3>
 
-    <div className="payment-card">
-      <span>ZELLE</span>
-      <p>carlos77arce@gmail.com</p>
-    </div>
-  </div>
-</div>
-      </section>
-    </main>
+          <img
+            src="/venmo-qr.png"
+            alt="Venmo QR Code"
+            className="venmo-qr"
+          />
+
+          <p>@CarlosArce</p>
+        </div>
+
+        <div className="payment-card">
+          <h3>Zelle</h3>
+
+          <p className="zelle-info">
+            Contact Carlos directly for Zelle payment details.
+          </p>
+        </div>
+      </div>
+    </section>
+  </section>
+</main>
   );
 }
 
