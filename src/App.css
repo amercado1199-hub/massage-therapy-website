@@ -1329,3 +1329,26 @@ body::before {
   color: #ccc;
   margin-top: 12px;
 }
+
+.booking-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.book-now-btn {
+  padding: 18px 40px;
+  background: #d97732;
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  transition: 0.3s ease;
+}
+
+.book-now-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(217, 119, 50, 0.4);
+}

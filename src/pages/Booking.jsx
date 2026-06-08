@@ -9,12 +9,15 @@ function Booking() {
         </span>
       </section>
 
-      <div className="calendar-wrapper">
-        <iframe
-          src="https://calendar.app.google/ErAQVy1Zj5kS74VeA"
-          title="A.R.C.E Massage Booking Calendar"
-          className="booking-calendar"
-        ></iframe>
+      <div className="booking-button-container">
+        <a
+          href="https://calendar.app.google/ErAQVy1Zj5kS74VeA"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="book-now-btn"
+        >
+          BOOK YOUR APPOINTMENT
+        </a>
       </div>
     </main>
   );
