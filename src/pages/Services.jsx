@@ -171,7 +171,7 @@ function Services() {
           <h3>Zelle</h3>
 
           <p className="zelle-info">
-            Contact Carlos directly for Zelle payment details.
+            carlos77arce@gmail.com
           </p>
         </div>
       </div>
