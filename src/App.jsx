@@ -52,7 +52,7 @@ function App() {
           <h3>A.R.C.E</h3>
 
           <p className="footer-tagline">
-            Arts • Recovery • Calm • Energy
+            Art • Recovery • Calm • Energy
           </p>
 
           <div className="footer-socials">

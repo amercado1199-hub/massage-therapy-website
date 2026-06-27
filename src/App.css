@@ -1174,8 +1174,8 @@ body::before {
   display: block;
 
   /* make logo bigger */
-  width: 650px;
-  max-width: 95vw;
+  width: 900px;
+  max-width: 100vw;
 
   margin: 0 auto;
   animation: none;
@@ -1351,4 +1351,22 @@ body::before {
 .book-now-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 20px rgba(217, 119, 50, 0.4);
+}
+
+.footer-tagline {
+  display: block;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-top: 12px;
+}
+
+.footer-tagline {
+  position: relative;
+  left: 4px;
+}
+
+
+.hero-buttons {
+  margin-top: 20px;
 }
