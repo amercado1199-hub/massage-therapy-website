@@ -1,16 +1,83 @@
-# React + Vite
+# A.R.C.E. Massage Therapy Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
 
-Currently, two official plugins are available:
+A.R.C.E. Massage Therapy is a professional website built for a licensed massage therapist to promote his business and provide clients with an easy way to learn about available services and schedule appointments. The website was designed with a clean, modern, and mobile-friendly interface that reflects the client's brand while making it simple for visitors to navigate.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+* Responsive design for desktop, tablet, and mobile devices
+* Professional homepage with business branding
+* About page introducing the massage therapist
+* Services page with descriptions of available massage treatments
+* Online booking through Google Calendar
+* Contact page with business information
+* Venmo QR code for convenient payments
+* Easy-to-use navigation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+* React
+* Vite
+* JavaScript
+* CSS
+* React Router
+* Google Calendar
+* Vercel
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <your-github-repository-url>
+```
+
+Navigate into the project folder:
+
+```bash
+cd <repository-name>
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open your browser and visit:
+
+```
+http://localhost:5173
+```
+
+## Project Structure
+
+```
+src/
+ ├── components/
+ ├── pages/
+ ├── assets/
+ ├── App.jsx
+ ├── main.jsx
+ └── index.css
+```
+
+## Future Improvements
+
+* Improve animations and transitions.
+* Add an online intake form for new clients.
+* Integrate a dedicated booking platform with appointment confirmations.
+* Expand accessibility features and continue refining the responsive design.
+
+## Author
+
+**Alyssa Mercado**
+
+Final Capstone Project – Flatiron School Software Engineering Program
