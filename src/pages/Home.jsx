@@ -14,9 +14,6 @@ function Home() {
 
           <div className="hero-buttons">
             <a href="/contact">
-              <button className="primary-btn">
-                BOOK A SESSION
-              </button>
             </a>
 
             <a href="/services">
